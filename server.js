@@ -15,7 +15,8 @@ app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
-  console.log(req.headers['user-agent'])
+  let hd = JSON.stringify(req.headers);
+  console.log(hd);
   res.send("hello");
 });
 
