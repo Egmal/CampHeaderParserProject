@@ -15,13 +15,14 @@ app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
+  console.log(req.ips);
   res.sendFile(__dirname + "/views/index.html");
 });
 
 
 // your first API endpoint... 
 app.get("/api/whoami", function (req, res) {
-  console.log(req.headers);
+  
   res.json({greeting: 'hello API'});
 });
 
